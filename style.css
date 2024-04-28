@@ -1,0 +1,200 @@
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html{
+        scroll-behavior: smooth;
+    }
+
+    :root{
+        /* -- Primary Colors -- */
+        --cc-primary-dark-cyan: hsl(158, 36%, 37%);
+        --cc-primary-cream: hsl(30, 38%, 92%);
+
+        /* -- Neutral -- */
+        --cc-neutal-very-dark-blue: hsl(212, 21%, 14%);
+        --cc-neutral-dark-graylish-blue:  hsl(228, 12%, 48%);
+        --cc-neutral-white: hsl(0, 0%, 100%);
+
+        /* -- Fonts -- */
+        --fs-fonts-size: 0.9rem;
+
+        /* -- Fonts Famliy -- */
+        --ff-montserrat-fonts:"Montserrat",sans-serif;
+        --ff-fraunces-fonts:"Fraunces",sans-serif;
+
+        /* -- Fonts Weighs -- */
+        --fw-montserrat-normal: 500;
+        --fw-montserrat-bold: 700;
+
+        --fw-fraunces-bold: 700;
+    }
+
+    body{
+        background-color: var(--cc-primary-cream);
+        font-size: var(--fs-fonts-size);
+    }
+
+    .container{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .product-card{
+        height: 608px;
+        border-radius: 10px;
+        background-color: var(--cc-neutral-white);
+    }
+
+    .product-banner{
+        height: 239px;
+        background-image: url(images/image-product-mobile.jpg);
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .product-details{
+        padding: 1.8rem;
+    }
+
+    .product-details h3{
+        font-family: var(--ff-montserrat-fonts);
+        text-transform: uppercase;
+        font-weight: var(--fw-montserrat-normal);
+        letter-spacing: 5px;
+        font-size: 0.9rem;
+        color: var(--cc-neutral-dark-graylish-blue);
+        margin-bottom: 10px;
+    }
+
+    .product-details h1{
+        font-family: var(--ff-fraunces-fonts);
+        font-weight: var(--fw-fraunces-bold);
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+    .product-details p{
+        font-family: var(--ff-montserrat-fonts);
+        font-weight: var(--fw-montserrat-normal);
+        font-size: 0.9rem;
+        color: var(--cc-neutral-dark-graylish-blue);
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .price-tags{
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        margin-bottom: 15px;
+    }
+    .price-tags h2{
+        font-size: 2rem;
+        font-family: var(--ff-fraunces-fonts);
+        color: var(--cc-primary-dark-cyan);
+        margin-right: 20px;
+    }
+
+    .price-tags p{
+        text-decoration: line-through;
+        color: var(--cc-neutral-dark-graylish-blue);
+    }
+
+    .btn-add{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--cc-primary-dark-cyan);
+        border: none;
+        color: var(--cc-neutral-white);
+        padding: 5px;
+        border-radius: 10px;
+        transition: ease-in 0.2s;
+    }
+
+    .btn-add p{
+        color: var(--cc-neutral-white);
+        margin-left: 10px;
+        font-size: 0.9rem;
+        margin-top: 7px;
+    }
+
+    .btn-add img{
+        width: 15px;
+    }
+
+    .btn-add:hover{
+        background-color: var(--cc-neutal-very-dark-blue);
+    }
+
+    .attribution { font-size: 11px; text-align: center; font-family: var(--ff-montserrat-fonts); }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+/* -- Desktop View -- */
+
+@media only screen and (min-width: 768px ) {
+
+        .product-card{
+        width: 602px;
+        height: 450px;
+        display: flex;
+    }
+
+    .product-banner{
+        height: 100%;
+        width: 1000px;
+        background-position: center;
+        background-image: url(images/image-product-desktop.jpg);
+        background-size: cover;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+
+    }
+
+    .product-details h1{
+        width: 200px;
+        margin-bottom: 20px;
+    }
+    .product-details h3{
+        font-size: 0.7rem;
+        margin-bottom: 20px;
+    }
+
+    .product-details p{
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+    }
+
+    .price-tags{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .price-tags p{
+    margin-top: 20px;
+    }
+    .btn-add{
+        margin-top: 15px;
+        height: 50px;
+    }
+    .btn-add img{
+        width: 15px;
+    }
+
+    .btn-add p{
+        font-size: 0.7rem;
+        margin-top: 15px;
+    }
+}
